@@ -2,6 +2,7 @@
 .godot/
 .nomedia
 
+
 # Godot-specific ignores
 .import/
 export.cfg
@@ -14,3 +15,7 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Game assets
+_scene_lock/
+TiledWorkspace/

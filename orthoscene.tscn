@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddx6wxgiwtwfh"]
+
+[ext_resource type="Script" uid="uid://b2rou1s2fm4bf" path="res://camera_3d.gd" id="2_j8e7d"]
+[ext_resource type="PackedScene" uid="uid://coa2h84quashr" path="res://_scene_lock/test.tscn" id="3_qm4wb"]
+[ext_resource type="PackedScene" uid="uid://41k6w48syk23" path="res://Player.tscn" id="3_vh3la"]
+
+[node name="orthoscene" type="Node3D"]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.702153, -0.356013, 0.616633, 0, 0.866025, 0.5, -0.712026, -0.351077, 0.608082, 25, 5, 25)
+visible = false
+projection = 1
+size = 28.619
+script = ExtResource("2_j8e7d")
+
+[node name="Player" parent="." instance=ExtResource("3_vh3la")]
+transform = Transform3D(0.699663, 0, 0.714473, 0, 1, 0, -0.714473, 0, 0.699663, 6, 0, 7)
+
+[node name="LevelTemplate" parent="." instance=ExtResource("3_qm4wb")]
