@@ -189,7 +189,7 @@ func generate_walls(floor_layer: TileMapLayer, wall_layer: TileMapLayer, level_r
 		var material = StandardMaterial3D.new()
 		material.albedo_texture = wall_atlas_source.texture
 		material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
-		material.cull_mode = BaseMaterial3D.CULL_DISABLED
+		
 
 		var array_mesh = st.commit()
 		array_mesh.surface_set_material(0, material)

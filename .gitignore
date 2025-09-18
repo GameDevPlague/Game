@@ -19,3 +19,8 @@ mono_crash.*.json
 # Game assets
 _scene_lock/
 TiledWorkspace/
+Assets/
+bakelightmap/
+
+#IDE-specific ignores
+.idea/
