@@ -13,12 +13,11 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var sprite_3d: Sprite3D = $Sprite3D
 
 # 动画帧数据
-# 假设你的雪碧图布局如下:
 # 第1行 (帧 0-3): 向下移动 (Z轴正方向)
 # 第2行 (帧 4-7): 向左移动 (X轴负方向)
 # 第3行 (帧 8-11): 向右移动 (X轴正方向)
 # 第4行 (帧 12-15): 向上移动 (Z轴负方向)
-# 如果你的布局不同，请修改下面的帧序列
+
 const ANIMATION_FRAMES: Dictionary = {
 	"down": [0, 1, 2, 3],
 	"left": [4, 5, 6, 7],
@@ -39,7 +38,7 @@ func _physics_process(delta: float):
 		velocity.y -= gravity * delta
 
 	# --- 2. 获取输入 ---
-	# 使用 get_vector 可以很方便地处理手柄摇杆的模拟量输入
+	
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	
 	# --- 3. 计算移动方向 ---
